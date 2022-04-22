@@ -1,22 +1,5 @@
-def owner = 'abhishreepavan'
-def project = 'jenkins_demo'
-def jobName = "${owner}-${project}".replaceAll('/','-')
-job(jobName) {
-  scm {
-      git {
-          remote {
-            github("${owner}/${project}")
-          }
-          tag() {
-                message('False')
-                create()
-                }
-      }
-  }
-  triggers {
-      scm('*/15 * * * *')
-  }
+job('example') {
   steps {
-      shell('ls -l')
+    batchFile('echo Hello World!')
   }
 }

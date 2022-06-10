@@ -3,5 +3,6 @@ job('example') {
     batchFile('echo Hello World!')
     batchFile('echo Sucess!')
     batchFile('echo Sucesssss!')
+    batchFile('echo git commit changes!')
   }
 }

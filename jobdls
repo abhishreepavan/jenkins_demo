@@ -2,5 +2,6 @@ job('example') {
   steps {
     batchFile('echo Hello World!')
     batchFile('echo Sucess!')
+    batchFile('echo Sucesssss!')
   }
 }

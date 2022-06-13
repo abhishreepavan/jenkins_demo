@@ -4,7 +4,7 @@ job('example') {
     batchFile('echo Sucess!')
     batchFile('echo Sucesssss!')
     batchFile('echo git commit changes!')
-    batchFile('echo git commit changes shown!')
+    batchFile('echo git commit changes shown!!!')
     
   }
 }

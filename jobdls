@@ -5,6 +5,7 @@ job('example') {
     batchFile('echo Sucesssss!')
     batchFile('echo git commit changes!')
     batchFile('echo git commit changes shown!!!')
+    batchFile('echo git commit changes shown!!!')
     
   }
 }

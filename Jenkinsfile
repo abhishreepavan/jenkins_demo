@@ -7,9 +7,8 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('print the list of modified files')
-        {
-            steps{
+    }
+}
                 String getChangedFilesList() {
                     changedFiles = []
                     for (changeLogSet in currentBuild.changeSets)
@@ -29,8 +28,7 @@ pipeline {
                 
             }
         }       
-    }
-}
+
 
     
 

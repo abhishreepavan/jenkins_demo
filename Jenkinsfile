@@ -9,25 +9,23 @@ pipeline {
         }
     }
 }
-                String getChangedFilesList() {
-                    changedFiles = []
-                    for (changeLogSet in currentBuild.changeSets)
-                    { 
-                        for (entry in changeLogSet.getItems()) 
-                        { 
-                            for (file in entry.getAffectedFiles()) 
-                            {
-                                changedFiles.add(file.getPath()) 
-                            }
-                         }
-                    }
+String getChangedFilesList() {
+    changedFiles = []
+    for (changeLogSet in currentBuild.changeSets)
+    { 
+        for (entry in changeLogSet.getItems()) 
+        { 
+            for (file in entry.getAffectedFiles()) 
+            {
+                changedFiles.add(file.getPath()) 
+             }
+         }
+    }
 
-                     return changedFiles
-
-                }
+     return changedFiles
+}
                 
-            }
-        }       
+       
 
 
     

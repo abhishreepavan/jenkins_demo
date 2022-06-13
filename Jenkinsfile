@@ -14,10 +14,10 @@ pipeline {
                     script{
                         try {
                             sh 'cd jenkins_demo'
-                            sh 'git diff HEAD^.. '}
+                            sh 'git diff --name-only HEAD^.. '}
                         catch(error){
                             sh 'cd jenkins_demo'
-                            sh 'git diff HEAD^.. '}
+                            sh 'git diff --name-only HEAD^.. '}
                     }
 
                     }

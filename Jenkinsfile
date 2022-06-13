@@ -7,9 +7,14 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('printing recent commit message') {
+        stage('ssh into a instance') {
             steps {
-                sh 'git diff HEAD^.. '
+                sshagent(['8ca3a089-4d8e-47a5-bc2d-c52d40aed6e9']) {
+                    sh 'ssh -o StrictHostKeyChecking=no user@hostname.com uptime'
+                    sh 'cd jenkins_demo'
+                    sh 'git diff HEAD^.. '
+
+                    }
             }
         }
     }

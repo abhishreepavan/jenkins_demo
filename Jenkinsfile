@@ -7,7 +7,7 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('prinintg commit') {
+        stage('printing recent commit') {
             steps {
                 sh 'git diff HEAD^ HEAD -name-status'
             }

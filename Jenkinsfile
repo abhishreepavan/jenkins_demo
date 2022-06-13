@@ -7,7 +7,7 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('printing recent commit') {
+        stage('printing recent commit message') {
             steps {
                 sh 'git diff HEAD^ HEAD -name-status'
             }

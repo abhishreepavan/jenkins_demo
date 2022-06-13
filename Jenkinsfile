@@ -9,7 +9,7 @@ pipeline {
         }
         stage('prinintg commit') {
             steps {
-                sh 'git diff HEAD^ HEAD'
+                sh 'git diff HEAD^ HEAD -name-status'
             }
         }
     }

@@ -9,7 +9,7 @@ pipeline {
         }
         stage('printing recent commit message') {
             steps {
-                sh 'git diff HEAD^ HEAD -name-status'
+                sh 'git diff HEAD~25 HEAD –name-status'
             }
         }
     }

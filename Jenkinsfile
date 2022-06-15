@@ -23,6 +23,11 @@ pipeline {
                     }
             }
         }
+        stage(' copying config file to server') {
+         steps {
+            ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory', playbook: 'ansible-playbook.yml'
+         }
+        }
     }
 }
 

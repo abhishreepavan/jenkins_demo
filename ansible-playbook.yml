@@ -2,7 +2,7 @@
  - hosts: nodes
    tasks:
        
-     - name: example copying file with owner and permissions
+     - name: copying the config file to server
        copy:
            src: /etc/nginx/nginx.conf
            dest: /home/ec2-user

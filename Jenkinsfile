@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World i want to go home'
+                echo 'Hello World'
             }
         }
         stage('ssh into a instance') {

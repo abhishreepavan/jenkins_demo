@@ -6,6 +6,6 @@
        copy:
            src: /etc/nginx/nginx.conf
            dest: /home/ec2-user
-           owner: foo
-           group: foo
+           owner: root
+           group: root
            mode: 0644

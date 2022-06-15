@@ -4,7 +4,7 @@
        
      - name: copying the config file to server
        copy:
-           src: /etc/nginx/nginx.conf
+           src: nginx.conf
            dest: /etc/nginx/nginx.conf
            owner: root
            group: root

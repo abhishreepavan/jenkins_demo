@@ -5,7 +5,10 @@
      - name: copying the config file to server
        copy:
            src: /etc/nginx/nginx.conf
-           dest: /home/ec2-user
+           dest: /etc/nginx/nginx.conf
            owner: root
            group: root
            mode: 0644
+           
+     - name: Restart nginx
+       service: name=nginx state=restarted

@@ -1,6 +1,11 @@
 ---
  - hosts: nodes
    tasks:
-     - name: copy the file to server 
-       run_once: yes
-       copy: src=./etc/nginx/nginx.conf dest=/home/ec2-user
+       
+     - name: example copying file with owner and permissions
+       copy:
+           src: /etc/nginx/nginx.conf
+           dest: /home/ec2-user
+           owner: foo
+           group: foo
+           mode: 0644

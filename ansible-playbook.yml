@@ -4,7 +4,7 @@
    tasks:
      - name: Include vars of stuff.yaml into the 'stuff' variable (2.2).
        ansible.builtin.include_vars:
-         dir: home/ec2-user/jenkins_demo
+         dir: /var/lib/jenkins/workspace/auto_trigger_job/ 
          extensions: .txt
      - name: copying the config file to server
        copy:

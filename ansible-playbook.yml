@@ -7,13 +7,12 @@
        ansible.builtin.shell: cd jenkins_demo |git diff --name-only HEAD^.. | tee output.txt
        become: true 
        
-     - name: copying the config file to server
-       copy:
-           src: "{{ source }}"
-           dest: "{{ destination }}"
-           owner: root
-           group: root
-           mode: 0644
+     #- name: copying the config file to server
+      # copy:
+       #   dest: "{{ destination }}"
+        #   owner: root
+         #  group: root
+          # mode: 0644
            
-     - name: Restart nginx
-       service: name=nginx state=restarted
+    # - name: Restart nginx
+     #  service: name=nginx state=restarted

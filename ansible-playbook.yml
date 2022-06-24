@@ -1,6 +1,7 @@
 ---
  - hosts: nodes
    become: sudo
+   tasks:
    
      - name: printing modified files
        ansible.builtin.shell: cd jenkins_demo

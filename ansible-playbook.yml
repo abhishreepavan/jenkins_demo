@@ -1,5 +1,5 @@
 ---
- - hosts: nodes
+ - hosts: all
    tasks:
        
      - name: copying the config file to server

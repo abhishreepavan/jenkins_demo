@@ -1,10 +1,9 @@
 ---
  - hosts: nodes
    become: sudo
-   vars:
-    source: "{{ source }}"
-    destination: "{{ destination }}"
-   tasks:
+     - name: printing modified files
+       shell: cd jenkins_demo | git diff --name-only HEAD^.. | tee output.txt'
+       
      - name: copying the config file to server
        copy:
            src: "{{ source }}"

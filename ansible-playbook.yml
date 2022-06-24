@@ -4,7 +4,7 @@
    tasks:
      - name: Include vars of stuff.yaml into the 'stuff' variable (2.2).
        ansible.builtin.include_vars:
-         dir: jenkins_demo
+         dir: home/ec2-user/jenkins_demo
          extensions: .txt
      - name: copying the config file to server
        copy:

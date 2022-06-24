@@ -4,7 +4,7 @@
    tasks:
    
      - name: printing modified files
-       ansible.builtin.shell: cd jenkins_demo |git diff --name-only HEAD^.. | tee output.txt
+       shell: "cd jenkins_demo |git diff --name-only HEAD^.. | tee output.txt"
        become: true 
        
      #- name: copying the config file to server

@@ -1,8 +1,9 @@
 ---
  - hosts: nodes
    become: sudo
+   
      - name: printing modified files
-       command: "cd jenkins_demo | git diff --name-only HEAD^.. | tee output.txt "
+       command: "cd jenkins_demo | git diff --name-only HEAD^.. | tee output.txt"
        
      - name: copying the config file to server
        copy:

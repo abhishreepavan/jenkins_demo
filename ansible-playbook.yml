@@ -1,5 +1,5 @@
 ---
- - hosts: localhost
+ - hosts: nodes
    become: sudo
    tasks:
      - name: Include vars of stuff.yaml into the 'stuff' variable (2.2).

@@ -26,7 +26,7 @@ pipeline {
         }
         stage(' copying config file to server') {
          steps {
-             ansiblePlaybook credentialsId: '8ca3a089-4d8e-47a5-bc2d-c52d40aed6e9', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory', playbook: 'ansible-playbook.yml', parameters[string(name: "output", value: "${VAR})]
+             ansiblePlaybook credentialsId: '8ca3a089-4d8e-47a5-bc2d-c52d40aed6e9', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory', playbook: 'ansible-playbook.yml'
          }
         }
     }

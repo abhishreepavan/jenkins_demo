@@ -14,7 +14,7 @@ pipeline {
                 script{
                     try {
                             sh 'ssh ec2-user@ip-172-31-6-32 pwd'
-                            sh 'ssh ec2-user@ip-172-31-6-32 cd jenkins_demo | git diff --name-only HEAD^.. > files.diff'}
+                            sh 'ssh ec2-user@ip-172-31-6-32 cd jenkins_demo | git diff --name-only HEAD^..'}
                             
                         catch(error){
                             sh 'cd jenkins_demo'

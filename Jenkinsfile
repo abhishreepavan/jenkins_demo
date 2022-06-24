@@ -15,7 +15,7 @@ pipeline {
                     try {
                             sh 'ssh ec2-user@ip-172-31-6-32 pwd'
                             sh 'ssh ec2-user@ip-172-31-6-32 cd jenkins_demo | git diff --name-only HEAD^.. > files.txt'
-                            #sh 'ssh ec2-user@ip-172-31-6-32 ansiblePlaybook credentialsId: '8ca3a089-4d8e-47a5-bc2d-c52d40aed6e9', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory', playbook: 'ansible-playbook.yml''}
+                            
                         catch(error){
                             sh 'cd jenkins_demo'
                             sh 'git diff --name-only HEAD^.. '}

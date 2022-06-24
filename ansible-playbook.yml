@@ -1,11 +1,14 @@
 ---
  - hosts: nodes
    become: sudo
+   vars:
+    source: "{{ source }}"
+    destination: "{{ destination }}"
    tasks:
      - name: copying the config file to server
        copy:
-           src: /var/lib/jenkins/workspace/auto_trigger_job/
-           dest: /etc/nginx/nginx.conf
+           src: "{{ source }}"
+           dest:"{{ destination }}"
            owner: root
            group: root
            mode: 0644

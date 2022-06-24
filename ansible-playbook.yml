@@ -4,8 +4,8 @@
    tasks:
      - name: Include vars of stuff.yaml into the 'stuff' variable (2.2).
        ansible.builtin.include_vars:
-       dir: vars/all
-       extensions: .txt
+         dir: vars/all
+         extensions: .txt
      - name: copying the config file to server
        copy:
            src: nginx.conf

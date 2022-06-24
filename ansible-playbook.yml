@@ -5,10 +5,10 @@
      - name: Include vars of stuff.yaml into the 'stuff' variable (2.2).
        ansible.builtin.include_vars:
          dir: /var/lib/jenkins/workspace/auto_trigger_job/ 
-         extensions: .txt
+         extensions: .conf
      - name: copying the config file to server
        copy:
-           src: nginx.conf
+           src: /var/lib/jenkins/workspace/auto_trigger_job/
            dest: /etc/nginx/nginx.conf
            owner: root
            group: root

@@ -3,7 +3,7 @@
    become: sudo
    
      - name: printing modified files
-       shell: sh """
+       ansible.builtin.shell: sh """
        cd jenkins_demo 
        git diff --name-only HEAD^.. 
        tee output.txt """

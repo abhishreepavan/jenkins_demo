@@ -1,5 +1,6 @@
 ---
  - hosts: all
+   become: sudo
    tasks:
        
      - name: copying the config file to server

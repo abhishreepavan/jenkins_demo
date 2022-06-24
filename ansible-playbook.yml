@@ -8,7 +8,7 @@
      - name: copying the config file to server
        copy:
            src: "{{ source }}"
-           dest:"{{ destination }}"
+           dest: "{{ destination }}"
            owner: root
            group: root
            mode: 0644

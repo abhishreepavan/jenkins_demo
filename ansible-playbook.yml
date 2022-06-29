@@ -9,13 +9,13 @@
        shell: "cd jenkins_demo && git diff --name-only HEAD^..| sudo tee output.txt"
        become: true 
        
-    - name: Copy each file over that matches the given pattern
-      copy:
+     - name: Copy each file over that matches the given pattern
+       copy:
         src: "{{ item }}"
         dest: "/etc/nginx/nginx.conf"
         owner: "root"
         mode: 600
-      with_fileglob:
+       with_fileglob:
         - "/jenkins_demo/*"
            
     - name: Restart nginx

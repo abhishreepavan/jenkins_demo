@@ -18,5 +18,5 @@
        with_fileglob:
         - "/jenkins_demo/*"
            
-    - name: Restart nginx
-       service: name=nginx state=restarted
+     - name: Restart nginx
+        service: name=nginx state=restarted

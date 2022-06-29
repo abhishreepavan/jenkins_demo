@@ -1,18 +1,22 @@
 ---
  - hosts: nodes
    become: sudo
+   vars:
+       item: output.txt
    tasks:
    
      - name: printing modified files
        shell: "cd jenkins_demo && git diff --name-only HEAD^..| sudo tee output.txt"
        become: true 
        
-     #- name: copying the config file to server
-      # copy:
-       #   dest: "{{ destination }}"
-        #   owner: root
-         #  group: root
-          # mode: 0644
+    - name: Copy each file over that matches the given pattern
+      copy:
+        src: "{{ item }}"
+        dest: "/etc/nginx/nginx.conf"
+        owner: "root"
+        mode: 600
+      with_fileglob:
+        - "/jenkins_demo/*"
            
-    # - name: Restart nginx
-     #  service: name=nginx state=restarted
+    - name: Restart nginx
+       service: name=nginx state=restarted

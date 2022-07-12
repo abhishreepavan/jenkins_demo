@@ -30,7 +30,7 @@ for item in repoDiffs:
            "-extra-vars src=source dest=destination service=service"
             ]
 
-        subprocess.run(cmd)
+        subprocess.call(cmd)
 
     except ValueError:
         print ("input correct service file")

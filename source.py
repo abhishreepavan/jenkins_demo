@@ -13,7 +13,7 @@ for item in repoDiffs:
 
     Source = item.a_path
     path = os.path.split(Source)
-    f=open('/home/ec2-user/jenkins_demo/src_dest.json')
+    f=open("/home/ec2-user/jenkins_demo/src_dest.json")
     src_data = f.read()
     src_load = json.loads(src_data)
     service=path[0]

@@ -1,6 +1,7 @@
 import json
-from git import Repo
 import os
+os.environ["GIT_PYTHON_REFRESH"] = "quiet"
+import git
 from sys import argv
 import subprocess
 

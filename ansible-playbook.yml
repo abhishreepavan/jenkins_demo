@@ -1,5 +1,5 @@
 ---
- - hosts: 43.204.212.230
+ - hosts: all
    tasks:
    
      - name: Copy each file over that matches the given pattern

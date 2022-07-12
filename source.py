@@ -1,10 +1,10 @@
 import json
-import git
+from git import Repo
 import os
 from sys import argv
 import subprocess
 
-repo = git.Repo("/home/ec2-user/jenkins_demo")
+repo = Repo("/home/ec2-user/jenkins_demo")
 
 repoDiffs = repo.head.commit.diff('HEAD~1')
 print(repoDiffs)

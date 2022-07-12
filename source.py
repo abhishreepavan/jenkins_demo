@@ -1,5 +1,5 @@
 import json
-import git 
+import Repo
 import os
 from sys import argv
 import subprocess

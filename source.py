@@ -23,8 +23,8 @@ for item in repoDiffs:
            destination = src_load[service]['dest']
            print(source)
            print(destination)
-           cmd = ["ansible-playbook","-i inventory","ansible-playbook.yml","-extra-vars src=source dest=destination service=service"]
-           subprocess.call(cmd)
+         cmd = ["ansible-playbook","-i inventory","ansible-playbook.yml","-extra-vars src=source dest=destination service=service"]
+         subprocess.call(cmd)
 
     except ValueError:
         print ("input correct service file")

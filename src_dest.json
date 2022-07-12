@@ -1,0 +1,10 @@
+{
+    "nginx":{
+    "src":"nginx/nginx.conf",
+      "dest":"/etc/nginx/nginx.conf"
+    },
+    "docker":{
+    "src":"docker/docker.conf",
+    "dest":"/etc/docker/docker.conf"
+    }
+    }

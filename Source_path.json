@@ -1,7 +1,0 @@
-{
-  server1:
-  {
-    src:nginx.conf
-    dest: etc/nginx/nginx.con
-  }
-}

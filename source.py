@@ -5,7 +5,7 @@ import git
 from sys import argv
 import subprocess
 
-repo = git.Repo("/home/ec2-user/jenkins_demo")
+repo = git.Repo("/home/ec2-user/ansible/jenkins_demo")
 
 repoDiffs = repo.head.commit.diff('HEAD~1')
 path=[]

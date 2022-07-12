@@ -8,13 +8,12 @@ import subprocess
 repo = git.Repo("/home/ec2-user/jenkins_demo")
 
 repoDiffs = repo.head.commit.diff('HEAD~1')
-print(repoDiffs)
 path=[]
 for item in repoDiffs:
 
     Source = item.a_path
     path = os.path.split(Source)
-    f=open('src_dest.json')
+    f=open('./src_dest.json')
     src_data = f.read()
     src_load = json.loads(src_data)
     service=path[0]

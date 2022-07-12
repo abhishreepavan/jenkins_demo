@@ -1,24 +1,13 @@
 ---
- - hosts: all
-   become: sudo
-   vars:
-       item: output.txt
+ - hosts: 43.204.212.230
    tasks:
    
-     - name: printing modified files
-       shell: "cd jenkins_demo && git diff --name-only HEAD^..| sudo tee output.txt"
-       become: true 
-       
      - name: Copy each file over that matches the given pattern
        copy:
-        src: "{{ item }}"
-        dest: "/etc/nginx/nginx.conf"
-        owner: "root"
-        mode: 600
-       with_fileglob:
-        - "/jenkins_demo/*"
+        src = "{{src}}"
+        dest= "{{dest}}"
            
-     - name: Restart nginx
-       service: 
-          name: nginx 
-          state: reload
+     - name: Restart service
+       ansible.builtin.service:
+          name: "{{service}}"
+          state: restarted

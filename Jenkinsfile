@@ -8,6 +8,7 @@ pipeline {
                     sh 'ssh -o StrictHostKeyChecking=no ec2-user@ip-172-31-6-32 uptime'
                 script{
                     try {
+                        #try without virtual env for python3
                              sh 'ssh ec2-user@ip-172-31-6-32 whoami'
                              sh('''
                              ssh -tt ec2-user@ip-172-31-6-32 << ENDSSH

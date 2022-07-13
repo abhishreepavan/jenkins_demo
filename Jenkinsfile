@@ -9,14 +9,15 @@ pipeline {
                 script{
                     try {
                              sh 'ssh ec2-user@ip-172-31-6-32 whoami'
-                             sh '''
+                             sh('''
                              ssh ec2-user@ip-172-31-6-32 << EOF
                              cd /home/ec2-user/ansible/jenkins_demo
                              source /home/ec2-user/abhi/bin/activate 
                              python3 source.py
                              deactivate
+                             exit;
                              EOF
-                             '''
+                             ''')
                     }
                     catch(error){
                             print("error")

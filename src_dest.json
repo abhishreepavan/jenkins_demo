@@ -7,4 +7,8 @@
     "src":"docker/docker.conf",
     "dest":"/etc/docker/docker.conf"
     }
+    "kerberos":{
+    "src":"kerberos/krb5.conf",
+    "dest":"/etc/krb5.conf"
+    }
     }

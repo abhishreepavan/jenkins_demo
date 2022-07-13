@@ -8,7 +8,7 @@ pipeline {
                     sh 'ssh -o StrictHostKeyChecking=no ec2-user@ip-172-31-6-32 uptime'
                 script{
                     try {
-                             sh 'ssh ec2-user@ip-172-31-6-32 cd /home/ec2-user/ansible/jenkins_demo && /home/ec2-user/abhi/bin/python3 source.py'
+                             sh 'ssh ec2-user@ip-172-31-6-32 cd /home/ec2-user/ansible/jenkins_demo && source /home/ec2-user/abhi/bin/activate && python3 source.py'
                     }
                     catch(error){
                             print("error")

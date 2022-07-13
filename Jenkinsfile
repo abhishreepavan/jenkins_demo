@@ -10,7 +10,7 @@ pipeline {
                     try {
                              sh 'ssh ec2-user@ip-172-31-6-32 whoami'
                              sh('''
-                             ssh -t ec2-user@ip-172-31-6-32 <<EOF
+                             ssh -tt ec2-user@ip-172-31-6-32 <<EOF
                              cd /home/ec2-user/ansible/jenkins_demo
                              source /home/ec2-user/abhi/bin/activate 
                              python3 source.py

@@ -11,6 +11,7 @@ pipeline {
                             sh 'ssh ec2-user@ip-172-31-6-32 pwd'
                             sh 'ssh ec2-user@ip-172-31-6-32 cd ansible'
                             sh 'ssh ec2-user@ip-172-31-6-32 cd jenkins_demo'
+                            sh 'ssh ec2-user@ip-172-31-6-32 pwd'
                             sh 'ssh ec2-user@ip-172-31-6-32 python /home/ec2-user/ansible/jenkins_demo/source.py'
                     }
                     catch(error){

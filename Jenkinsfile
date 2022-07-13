@@ -15,7 +15,7 @@ pipeline {
                              source /home/ec2-user/abhi/bin/activate 
                              python3 source.py
                              deactivate
-                             exit;
+                             exit
                              ENDSSH
                              ''')
                     }

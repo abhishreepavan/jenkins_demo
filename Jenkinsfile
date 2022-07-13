@@ -8,7 +8,7 @@ pipeline {
                     sh 'ssh -o StrictHostKeyChecking=no ec2-user@ip-172-31-6-32 uptime'
                 script{
                     try {
-                            sh ssh -t ec2-user@ip-172-31-6-32 << EOF 
+                             ssh ec2-user@ip-172-31-6-32 << EOF 
                                cd ansible
                                cd jenkins_demo
                                pwd

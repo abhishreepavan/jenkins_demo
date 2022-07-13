@@ -1,5 +1,8 @@
 ---
  - hosts: all
+   vars:
+       src = "path_from_git"
+       dest = "path_to_server"
    tasks:
    
      - name: Copy each file over that matches the given pattern

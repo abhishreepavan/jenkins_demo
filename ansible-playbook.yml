@@ -7,7 +7,7 @@
    
      - name: Copy each file over that matches the given pattern
        copy:
-        content: "{{src}}"
+        src: "{{src}}"
         dest: "{{dest}}"
         remote_src = yes
            

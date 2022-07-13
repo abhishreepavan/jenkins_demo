@@ -9,6 +9,7 @@
        copy:
         src = "{{src}}"
         dest= "{{dest}}"
+        remote_src =yes
            
      - name: Restart service
        ansible.builtin.service:

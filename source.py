@@ -25,7 +25,7 @@ for item in repoDiffs:
            print(destination)
            cmd = ["/usr/bin/ansible-playbook","/home/ec2-user/ansible/jenkins_demo/ansible-playbook.yml","-extra-vars src={} dest={} service={}".format(source, destination, service)]
            subprocess.call(cmd)
-
+#meaningfulelsestatement
     except ValueError:
         print ("input correct service file")
 
